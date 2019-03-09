@@ -4,10 +4,11 @@ Diabetes Prediction is my weekend practice project. In this I used KNN Neighbors
 The model is already trained using 768 different types of data.
 
 # Requirements
+pycharm
 python 2.7
 sklearn
 numpy
 flask
 json
 
-Run app.py
+Just only Run app.py and open http://127.0.0.1:5000 in your web browser
