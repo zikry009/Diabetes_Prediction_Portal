@@ -21,7 +21,8 @@ def predict():
     with open(os.path.join(os.getcwd()+"/"+path1,'file.json'), 'r') as f:
         values = json.load(f)
     df = pd.DataFrame(json_normalize(values))
-    model = joblib.load(r"D:/Diabetes_Predition/static/model/diabetes.pkl")
+    model_path=os.getcwd()+"/static/model/diabetes.pkl"
+    model = joblib.load(model_path)
     result = model.predict(df)
     a=np.array(1)
     if result.astype('int')==a.astype('int'):
