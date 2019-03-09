@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Diabetes Prediction</title>
+    <style>
+        body{
+            background-image: repeating-radial-gradient(aquamarine,aqua,darkcyan);
+            background-repeat: no-repeat;
+            background-size: 100% 206%;
+        }
+        #btn{
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            display: block;
+            font-size: 18px;
+        }
+        #btn:hover{
+            background-color: deepskyblue;
+        }
+        hr{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<center><h1>Welcome to Diabetes Prediction Portal</h1></center><br>
+<form action="/predict" method="post">
+    <label>Enter BMI(Body Mass Index):</label><input type="text" name="bmi" placeholder="BMI(Body Mass Index)" required>
+    <label>Enter BP(Body Pressure):</label><input type="text" name="bp" placeholder="BP(Blood Pressure)" required>
+    <label>Enter Glucose Level:</label><input type="text" name="glucose" placeholder="Glucose" required>
+    <label>Enter Insulin Level:</label><input type="text" name="insulin" placeholder="Insulin Level" required><br><br>
+    <center><input type="submit" value="Submit" id="btn"></center>
+</form><br>
+<main><p><b>Note: </b><i>Body Mass Index (BMI) is a measure of body fat based on height and weight.Body Mass Index is a simple calculation using a person’s height and weight. The formula is BMI = kg/m<sup>2</sup> where kg is a person’s weight in kilograms and m<sup>2</sup> is their height in metres squared.
+    A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65 years.</i></p></main><br>
+<p><b>Important Notice: </b><i>It is for only Educational purpose.</i></p>
+{% if msg=="Success" %}
+<hr/>
+    <center><h1>Your Result:</h1><strong><i>Positive!! You have diabetes</i></strong></center>
+{% endif %}
+{% if msg=="Unsuccess"  %}
+<hr/>
+   <center><h2>Your Result:</h2><strong><i>Negative!! You do not have diabetes<br>Probability that you will have diabetes in future:{{ prob }}&percnt;</i></strong></center><br>
+
+{% endif %}
+</body>
+</html>
