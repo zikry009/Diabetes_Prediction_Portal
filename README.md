@@ -17,6 +17,6 @@ Just only Run app.py and open http://127.0.0.1:5000 in your web browser
 
 
 ![Alt text](https://github.com/zikry009/Diabetes_Prediction/blob/master/img/screenshot-127.0.0.1-5000-2019.03.09-16-56-50.png)
-# Predication
+# Prediction
 
 ![Alt text](https://github.com/zikry009/Diabetes_Prediction/blob/master/img/screenshot-127.0.0.1-5000-2019.03.09-16-57-30.png)
